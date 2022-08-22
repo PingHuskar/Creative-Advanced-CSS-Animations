@@ -1,0 +1,48 @@
+$primaryColor : #C47135;
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #272727;
+    margin: 0;
+    button {
+        border: none;
+        padding: 12px 40px;
+        background: $primaryColor;
+        color: #FFF;
+        font-size: 22px;
+        text-transform: uppercase;
+        cursor: pointer;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: -5px;
+            left: -5px;
+            border-top: 2px solid $primaryColor;
+            border-left: 2px solid $primaryColor;
+            transition: all 0.25s;
+        }
+        &::after {
+            @extend ::before;
+            border-bottom: 2px solid $primaryColor;
+            border-right: 2px solid $primaryColor;
+            top: inherit;
+            left: inherit;
+            border-top: inherit;
+            border-left: inherit;
+            bottom: -5px;
+            right: -5px;
+            transition: all 0.25s;
+        }
+        &:hover {
+            &::before, &::after {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}

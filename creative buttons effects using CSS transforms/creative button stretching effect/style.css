@@ -1,0 +1,22 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body a {
+  text-decoration: none;
+  color: #E1332d;
+  font-family: sans-serif;
+  font-size: 40px;
+  border: 3px solid #E1332d;
+  font-weight: 300;
+  letter-spacing: -2px;
+  padding: 40px 80px;
+  transition: all 0.5s;
+}
+body a:hover {
+  font-weight: 900;
+  letter-spacing: 10px;
+  border: 7px solid #E1332d;
+}/*# sourceMappingURL=style.css.map */

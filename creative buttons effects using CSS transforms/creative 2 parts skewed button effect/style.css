@@ -1,0 +1,46 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  margin: 0;
+  background: #10AC84;
+}
+body a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  position: relative;
+  letter-spacing: 7px;
+  padding: 18px 30px;
+  font-size: 28px;
+  color: #fff;
+}
+body a::before, body a::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: -1%;
+  top: -5px;
+  background: #EE5253;
+  transform: skewX(30deg);
+  z-index: -1;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+body a::after {
+  left: 51%;
+  top: 5px;
+  background: #0A3D62;
+}
+body a:hover::before, body a:hover::after {
+  transform: skewX(0deg);
+  left: 50%;
+  top: 0;
+}
+body a:hover::after {
+  transform: skewX(0deg);
+  left: 0%;
+  top: 0;
+}/*# sourceMappingURL=style.css.map */

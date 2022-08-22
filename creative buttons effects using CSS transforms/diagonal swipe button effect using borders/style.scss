@@ -1,0 +1,52 @@
+$primaryColor : #250e74;
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-weight: bold;
+    font-family: sans-serif;
+    a {
+        text-decoration: none;
+        position: relative;
+        width: 250px;
+        height: 80px;
+        text-align: center;
+        line-height: 80px;
+        color: $primaryColor;
+        border: 4px solid $primaryColor;
+        font-size: 24px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        transition: all 0.5s;
+        overflow: hidden;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            border-top: 40px solid $primaryColor;
+            border-bottom: 40px solid $primaryColor;
+            border-right: 40px solid transparent;
+            transition: all 0.5s;
+            z-index: -1;
+            transform: translateX(-100%);
+        }
+        &::after {
+            @extend ::before;
+            border-right: inherit;
+            border-left: 40px solid transparent;
+            transform: translateX(100%);
+        }
+        &:hover {
+            color: #FFF;
+            &::before, &::after {
+                transform: translateX(0%);
+            }
+            
+        }
+    }
+}

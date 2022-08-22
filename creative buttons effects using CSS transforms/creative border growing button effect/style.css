@@ -1,0 +1,44 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #272727;
+  margin: 0;
+}
+body button {
+  border: none;
+  padding: 12px 40px;
+  background: #C47135;
+  color: #FFF;
+  font-size: 22px;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+}
+body button::before, body button::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: -5px;
+  left: -5px;
+  border-top: 2px solid #C47135;
+  border-left: 2px solid #C47135;
+  transition: all 0.25s;
+}
+body button::after {
+  border-bottom: 2px solid #C47135;
+  border-right: 2px solid #C47135;
+  top: inherit;
+  left: inherit;
+  border-top: inherit;
+  border-left: inherit;
+  bottom: -5px;
+  right: -5px;
+  transition: all 0.25s;
+}
+body button:hover::before, body button:hover::after {
+  height: 100%;
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */

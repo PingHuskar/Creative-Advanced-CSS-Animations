@@ -1,0 +1,36 @@
+$primaryColor : #272727;
+$backgroundColor : #fff200;
+$LR : left,right;
+$BT : bottom,top;
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+        text-decoration: none;
+        color: $primaryColor;
+        font-family: sans-serif;
+        font-size: 45px;
+        border: 5px solid $primaryColor;
+        padding: 40px 80px;
+        position: relative;
+        overflow: hidden;
+        &:hover::before {
+            transform: rotate(0deg);
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: $backgroundColor;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            transform-origin: nth($BT, random($limit: 2)) nth($LR, random($limit: 2));
+            transform: rotate(90deg);
+            transition: transform 1s;
+        }
+    }
+}

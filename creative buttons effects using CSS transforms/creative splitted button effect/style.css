@@ -1,0 +1,78 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: verdana;
+  background: #222;
+}
+body a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 25px;
+  color: #F6B93B;
+  letter-spacing: 3px;
+  padding: 25px 50px;
+  border: 3px solid #F6B93B;
+  position: relative;
+  overflow: hidden;
+}
+body a::before, body a::after {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background: #F6B93B;
+  z-index: -1;
+  transition: all 0.2s;
+}
+body a::before {
+  top: 0;
+  left: -25%;
+  top: 100%;
+  left: 0;
+  transition-delay: 0.1s;
+}
+body a::after {
+  top: -100%;
+  left: 25%;
+  transition-delay: 0.2s;
+}
+body a:hover {
+  color: #222;
+}
+body a:hover::before {
+  top: 0;
+  left: 0;
+}
+body a:hover::after {
+  top: 0;
+  left: 25%;
+}
+body a:hover span::before {
+  top: 0;
+  right: 25%;
+}
+body a:hover span::after {
+  top: 0;
+  right: 0;
+}
+body a span::before, body a span::after {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background: #F6B93B;
+  z-index: -1;
+  transition: all 0.2s;
+}
+body a span::before {
+  top: 100%;
+  right: 25%;
+  transition-delay: 0.3s;
+}
+body a span::after {
+  top: -100%;
+  right: 0;
+  transition-delay: 0.4s;
+}/*# sourceMappingURL=style.css.map */

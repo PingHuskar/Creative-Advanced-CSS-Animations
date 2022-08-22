@@ -1,0 +1,23 @@
+$primaryColor : #E1332d;
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+        text-decoration: none;
+        color: $primaryColor;
+        font-family: sans-serif;
+        font-size: 40px;
+        border: 3px solid $primaryColor;
+        font-weight: 300;
+        letter-spacing: -2px;
+        padding: 40px 80px;
+        transition: all 0.5s;
+        &:hover {
+            font-weight: 900;
+            letter-spacing: 10px;
+            border: 7px solid $primaryColor;
+        }
+    }
+}
