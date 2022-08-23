@@ -1,0 +1,75 @@
+$primaryColor : #262626;
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    li {
+        a {
+            display: block;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: #262626;
+            text-transform: capitalize;
+            text-decoration: none;
+            position: relative;
+            transition: all 0.5s;
+            &:hover {
+                color: white;
+                span {
+                    transform: scaleY(1);
+                }
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 12px;
+                left: 12px;
+                width: 12px;
+                height: 12px;
+                border: 3px solid $primaryColor;
+                border-width: 0 0 3px 3px;
+                opacity: 0;
+                transition: all 0.3s
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: 12px;
+                right: 12px;
+                width: 12px;
+                height: 12px;
+                border: 3px solid $primaryColor;
+                border-width: 3px 3px 0 0;
+                opacity: 0;
+                transition: all 0.3s;
+            }
+        }
+        span {
+            position: absolute;
+            width: 25%;
+            height: 100%;
+            background: #262626;
+            z-index: -1;
+            left: 0;
+            top: 0;
+            transform: scaleY(0);
+            transition: all .5s;
+            transform-origin: top;
+            &:nth-child(2) { left: 25%; transition-delay: 0.15s; }
+            &:nth-child(3) { left: 50%; transition-delay: 0.30s; }
+            &:nth-child(4) { left: 75%; transition-delay: 0.45s; }
+        }
+    }
+}

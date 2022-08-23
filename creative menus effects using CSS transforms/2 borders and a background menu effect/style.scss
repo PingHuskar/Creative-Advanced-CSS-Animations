@@ -1,0 +1,59 @@
+$primaryColor : #262626;
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    li {
+        a {
+            display: block;
+            color: #222;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 15px 30px;
+            text-transform: capitalize;
+            text-decoration: none;
+            position: relative;
+            transition: all 0.5s;
+            &:hover {
+                color: #fff;
+                &::before {
+                    transform: scaleY(1.2);
+                    opacity: 1;
+                }
+                &::after {
+                    transform: scale(1);
+                }
+            }
+            
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-top: 2px solid black;
+                border-bottom: 2px solid black;
+                transform: scaleY(2);
+                // border: 3px solid $primaryColor;
+                transition: all 0.5s
+            }
+            &::after {
+                @extend ::before;
+                background: #222;
+                transform: scale(0);
+                z-index: -1;
+            }
+        }
+    }
+}

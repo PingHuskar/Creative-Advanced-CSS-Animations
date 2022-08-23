@@ -1,0 +1,61 @@
+$primaryColor : #ffeb3b;
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #272727;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    li {
+        list-style: none;
+        a {
+            position: relative;
+            display: block;
+            padding: 15px 30px;
+            margin: 0 15px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $primaryColor;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-top: 2px solid $primaryColor;
+                border-left: 2px solid $primaryColor;
+                transition: 0.5s;
+                box-sizing: border-box;
+                transform-origin: left;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                border-bottom: 2px solid $primaryColor;
+                border-right: 2px solid $primaryColor;
+                transition: 0.5s;
+                box-sizing: border-box;
+                transform-origin: right;
+            }
+            &:hover {
+                &::before, &::after {
+                    width: 15px;
+                    height: 15px;
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+}

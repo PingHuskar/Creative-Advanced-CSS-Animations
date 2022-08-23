@@ -1,0 +1,105 @@
+$primaryColor : #ff0;
+body {
+    background: #333;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul {
+    padding: 0;
+    display: flex;
+    li {
+        list-style: none;
+        padding: 10px 40px;
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 24px;
+            color: #fff;
+            position: relative;
+            padding: 5px;
+            &:hover {
+                color: $primaryColor;
+                span {
+                    opacity: 1;
+                    &:first-child {
+                        &::before {
+                            top: -10px;
+                            left: -10px;
+                        }
+                        &::after {
+                            top: -10px;
+                            right: -10px;
+                        }
+                    }
+                    &:last-child {
+                        &::before {
+                            bottom: -10px;
+                            left: -10px;
+                        }
+                        &::after {
+                            bottom: -10px;
+                            right: -10px;
+                        }
+                    }
+                }
+            }
+        }
+        span {
+            opacity: 0;
+            &:first-child {
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 8px;
+                    height: 8px;
+                    background: transparent;
+                    border-top: 2px solid $primaryColor;
+                    border-left: 2px solid $primaryColor;
+                    transition: 0.2s;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 8px;
+                    height: 8px;
+                    background: transparent;
+                    border-top: 2px solid $primaryColor;
+                    border-right: 2px solid $primaryColor;
+                    transition: 0.2s;
+                }
+            }
+            &:last-child {
+                &::before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 8px;
+                    height: 8px;
+                    background: transparent;
+                    border-bottom: 2px solid $primaryColor;
+                    border-left: 2px solid $primaryColor;
+                    transition: 0.2s;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    width: 8px;
+                    height: 8px;
+                    background: transparent;
+                    border-bottom: 2px solid $primaryColor;
+                    border-right: 2px solid $primaryColor;
+                    transition: 0.2s;
+                }
+            }
+        }
+    }
+}
