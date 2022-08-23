@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    background: #272727;
+}
+
+.container {
+    width: 450px;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+    background: #444;
+    border: 10px solid white;
+    img {
+        width: 100%;
+        transition: all 0.5s;
+        transition-delay: 0s;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #006266;
+        opacity: 0;
+        transition: all 0.3s;
+        transform: scale(0);
+    }
+    .caption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        color: #fff;
+        text-transform: uppercase;
+        flex-flow: column;
+    }
+    h1 {
+        text-align: center;
+        font-size: 17px;
+        padding: 20px;
+        margin-top: 20px;
+        background: rgba($color: #000000, $alpha: 0.8);
+        opacity: 0;
+        transform: scale(10);
+        transition: all 0.5s;
+    }
+    p {
+        font-size: 16px;
+        width: 80%;
+        align-self: center;
+        text-align: center;
+        transition: all 0.25s;
+        opacity: 0;
+        transform: scale(10);
+        transition: all 0.3s;
+    }
+    a {
+        text-decoration: none;
+        background: black;
+        color: #fff;
+        width: 100px;
+        padding: 15px;
+        margin-bottom: 20px;
+        align-self: center;
+        transition: all 0.3s;
+        transform: translateY(500px);
+    }
+    &:hover {
+        img {
+            transform: scale(0);
+            transition-delay: 0s;
+        }
+        &::before {
+            opacity: 1;
+            transform: scale(1) rotate(0);
+            transition-delay: 0s;
+        }
+        h1, p, a {
+            transform: translate(0,0) rotate(0) scale(1);
+            opacity: 1;
+            transition-delay: 0.5s;
+        }
+    }
+}

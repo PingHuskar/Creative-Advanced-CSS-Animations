@@ -1,0 +1,47 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+.container img {
+  width: 100%;
+  transition: all 0.5s;
+}
+.container .caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  color: #fff;
+  transition: all 0.5s;
+  background: black;
+  transform: translateX(-100%);
+}
+.container .caption h1 {
+  text-transform: uppercase;
+  margin: 0;
+}
+.container .caption p {
+  font-size: 18px;
+  text-transform: capitalize;
+}
+.container:hover .caption {
+  transform: translateX(0);
+}
+.container:hover img {
+  transform: translateX(100%);
+}/*# sourceMappingURL=style.css.map */

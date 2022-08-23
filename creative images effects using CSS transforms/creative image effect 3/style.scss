@@ -1,0 +1,49 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    img {
+        width: 100%;
+        transition: all 0.5s;
+    }
+    .caption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        color: #fff;
+        transition: all 0.5s;
+        background: black;
+        transform: translateX(-100%);
+        h1 {
+            text-transform: uppercase;
+            margin: 0;
+        }
+        p {
+            font-size: 18px;
+            text-transform: capitalize;
+        }
+    }
+    &:hover {
+        .caption {
+            transform: translateX(0);
+        }
+        img {
+            transform: translateX(100%);
+        }
+    }
+}
