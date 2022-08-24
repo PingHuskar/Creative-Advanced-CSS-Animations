@@ -1,0 +1,77 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  text-align: center;
+}
+.container .icon {
+  width: 90px;
+  height: 90px;
+  background: #f1f1f1;
+  margin: 10px;
+  border-radius: 30%;
+  color: #10ac84;
+  box-shadow: 0 5px 15px -5px #000070;
+  position: relative;
+  overflow: hidden;
+}
+.container .icon i {
+  line-height: 90px;
+  font-size: 25px;
+  transition: 0.2s;
+}
+.container .icon:hover {
+  transform: scale(1.3);
+  color: #f1f1f1;
+}
+.container .icon:hover::before {
+  -webkit-animation: animate 0.7s 1 forwards;
+          animation: animate 0.7s 1 forwards;
+}
+.container .icon::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #10ac84;
+  left: -110%;
+  top: 90%;
+  z-index: -1;
+  transform: rotate(45deg);
+}
+
+@-webkit-keyframes animate {
+  0% {
+    left: -110%;
+    top: 90%;
+  }
+  50% {
+    left: 15%;
+    top: -35%;
+  }
+  100% {
+    left: -10%;
+    top: -10%;
+  }
+}
+
+@keyframes animate {
+  0% {
+    left: -110%;
+    top: 90%;
+  }
+  50% {
+    left: 15%;
+    top: -35%;
+  }
+  100% {
+    left: -10%;
+    top: -10%;
+  }
+}/*# sourceMappingURL=style.css.map */
