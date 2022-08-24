@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  background: lightseagreen;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: white;
+  transition: 0.5s;
+}
+.card:hover {
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.2);
+}
+.card:hover .face2 {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: transparent;
+  border: 2px solid #013d4a;
+}
+.card:hover .face2 h2 {
+  color: #013d4a;
+  font-size: 32px;
+}
+.card .face, .card .face2, .card .face1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card .face1 {
+  padding: 20px;
+  text-align: center;
+  background: white;
+  color: #013d4a;
+}
+.card .face1 h2 {
+  margin-top: 120px;
+}
+.card .face1 a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #013d4a;
+  border: 2px solid #013d4a;
+  text-transform: capitalize;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.card .face1 a:hover {
+  background: #013d4a;
+  color: white;
+}
+.card .face2 {
+  background: #013d4a;
+  transition: 0.5s;
+}
+.card .face2 h2 {
+  font-size: 120px;
+  color: white;
+  transition: 0.5s;
+}/*# sourceMappingURL=style.css.map */

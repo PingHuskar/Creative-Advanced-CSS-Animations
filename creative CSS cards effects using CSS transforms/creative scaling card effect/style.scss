@@ -1,0 +1,80 @@
+body {
+    height: 100vh;
+    margin: 0;
+    background: #192a56;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: black;
+    box-shadow: 0 30px 30px rgba($color: #000000, $alpha: 0.5);
+    &:hover {
+        .content {
+            height: 100%;
+            width: 100%;
+            left: 0;
+            p, a {
+                opacity: 1;
+                transition-delay: .5s;
+            }
+        }
+        .imgbox {
+            img {
+                opacity: 0;
+            }
+        }
+    }
+    .imgbox {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: .5s;
+        img {
+            width: 100%;    
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+    }
+    .content {
+        position: absolute;
+        bottom: 0;
+        width: 80%;
+        height: 80px;
+        background: white;
+        left: 10%;
+        text-align: center;
+        transition: .5s;
+        overflow: hidden;
+        h3 {
+            font-size: 30px;
+            text-transform: uppercase;
+            margin: 25px;
+        }
+        p {
+            width: 80%;
+            margin: 10px auto;
+            font-size: 18px;
+            transition: .5s;
+            opacity: 0;
+        }
+        a {
+            text-decoration: none;
+            background: black;
+            color: white;
+            padding: 10px 15px;
+            display: inline-block;
+            margin-top: 10px;
+            transition: .5s;
+            opacity: 0;
+        }
+    }
+}
