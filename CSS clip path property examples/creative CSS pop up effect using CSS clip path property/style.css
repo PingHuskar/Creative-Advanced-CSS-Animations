@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  font-family: sans-serif;
+}
+
+.card {
+  width: 500px;
+  height: 250px;
+  background: #c7ecee;
+  padding: 20px 80px 20px 20px;
+  border-radius: 10px;
+  transition: 0.5s;
+  -webkit-clip-path: circle(7% at 93% 20%);
+          clip-path: circle(7% at 93% 20%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.card:hover {
+  -webkit-clip-path: circle(70%);
+          clip-path: circle(70%);
+}
+.card h1 {
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+.card p {
+  font-size: 18px;
+}/*# sourceMappingURL=style.css.map */

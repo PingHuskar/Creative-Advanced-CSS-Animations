@@ -1,0 +1,42 @@
+$backgroundColor : #222;
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $backgroundColor;
+}
+
+.main {
+    position: relative;
+    width: 800px;
+    h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 220px;
+        text-transform: uppercase;
+        user-select: none;
+        &:first-child {
+            &:hover ~ h1 {
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            }
+        }
+        &:last-child {
+            color: #fff;
+            transition: 0.5s;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);
+            background: $backgroundColor;
+            &:hover {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+        }
+    }
+}

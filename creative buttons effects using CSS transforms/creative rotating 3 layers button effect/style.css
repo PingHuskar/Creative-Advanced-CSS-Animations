@@ -30,7 +30,7 @@ body a::before, body a::after {
   align-items: center;
   transform: rotateX(270deg);
   transition: all 0.5s;
-  transform-origin: bottom;
+  transform-origin: top;
 }
 body a::after {
   background: red;
