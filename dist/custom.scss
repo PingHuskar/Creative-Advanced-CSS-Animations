@@ -1,0 +1,24 @@
+h1,h2,h3,h4,h5,h6,p {
+    font-family: sans-serif;
+    color: #000 !important;
+}
+.title {
+    color: #fff !important;
+}
+.bg {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.bg img {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    z-index: -1000;
+    opacity: 0.3;
+}
