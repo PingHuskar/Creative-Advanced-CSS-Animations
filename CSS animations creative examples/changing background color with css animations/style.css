@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  font-family: sans-serif;
+  -webkit-animation: bgchange 5s linear infinite;
+          animation: bgchange 5s linear infinite;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+h1 {
+  font-size: 70px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+@-webkit-keyframes bgchange {
+  0%, 100% {
+    background: #272727;
+  }
+  20% {
+    background: blue;
+  }
+  40% {
+    background: tomato;
+  }
+  60% {
+    background: lightblue;
+  }
+  80% {
+    background: darkgreen;
+  }
+}
+
+@keyframes bgchange {
+  0%, 100% {
+    background: #272727;
+  }
+  20% {
+    background: blue;
+  }
+  40% {
+    background: tomato;
+  }
+  60% {
+    background: lightblue;
+  }
+  80% {
+    background: darkgreen;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,77 @@
+$outer : 0;
+$outerColor : #EB4D4B;
+$middle : 60px;
+$middleColor : #218C74;
+$inner : calc($middle * 2);
+$innerColor : #CCAE62;
+$dot : calc($middle * 3);
+$borderSize : 5px solid;
+$animation : rotate 3s linear infinite;
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+}
+
+.loader {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    .outer {
+        position: absolute;
+        top: $outer;
+        left: $outer;
+        right: $outer;
+        bottom: $outer;
+        border-left: $borderSize $outerColor;
+        border-right: $borderSize $outerColor;
+        border-top: $borderSize transparent;
+        border-bottom: $borderSize transparent;
+        border-radius: 50%;
+        animation: $animation;
+    }
+    .middle {
+        position: absolute;
+        top: $middle;
+        left: $middle;
+        right: $middle;
+        bottom: $middle;
+        border-left: $borderSize $middleColor;
+        border-right: $borderSize $middleColor;
+        border-top: $borderSize transparent;
+        border-bottom: $borderSize transparent;
+        border-radius: 50%;
+        animation: $animation reverse;
+    }
+    .inner {
+        position: absolute;
+        top: $inner;
+        left: $inner;
+        right: $inner;
+        bottom: $inner;
+        border-left: $borderSize $innerColor;
+        border-right: $borderSize $innerColor;
+        border-top: $borderSize transparent;
+        border-bottom: $borderSize transparent;
+        border-radius: 50%;
+        animation: $animation;
+    }
+    .dot {
+        position: absolute;
+        top: $dot;
+        left: $dot;
+        right: $dot;
+        bottom: $dot;
+        background: white;
+        border-radius: 50%;
+    }
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+}

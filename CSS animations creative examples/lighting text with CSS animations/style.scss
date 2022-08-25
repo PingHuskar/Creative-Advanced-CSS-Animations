@@ -1,0 +1,44 @@
+$primaryColor : #fff900;
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #272727;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: sans-serif;
+    li {
+        list-style: none;
+        color: #484848;
+        font-size: 80px;
+        letter-spacing: 15px;
+        animation: lighting 1.4s linear infinite;
+        @for $i from 1 through 8 {
+            &:nth-child(#{$i}) {
+                animation-delay: calc(0.1s * $i);
+            }
+        }
+    }
+}
+
+@keyframes lighting {
+    0% {
+        color: #484848;
+        text-shadow: none;
+    }
+    90% {
+        color: #484848;
+        text-shadow: none;
+    }
+    100% {
+        color: $primaryColor;
+        text-shadow: 0 0 7px $primaryColor, 0 0 50px #ff6c00;
+    }
+}

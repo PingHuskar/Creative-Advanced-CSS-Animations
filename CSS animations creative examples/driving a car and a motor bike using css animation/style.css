@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+  max-height: 100vh;
+}
+
+.background {
+  height: 100vh;
+  background: url(bg.jpg);
+  background-position: bottom left;
+  -webkit-animation: driving 10s linear infinite;
+          animation: driving 10s linear infinite;
+}
+.background .car {
+  position: absolute;
+  left: 300px;
+  bottom: -50px;
+  width: 200px;
+}
+.background .motorbike {
+  position: absolute;
+  left: 700px;
+  bottom: 55px;
+  width: 150px;
+}
+
+@-webkit-keyframes driving {
+  from {
+    background-position: bottom left;
+  }
+  to {
+    background-position: bottom right;
+  }
+}
+
+@keyframes driving {
+  from {
+    background-position: bottom left;
+  }
+  to {
+    background-position: bottom right;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,40 @@
+$primaryColor : white;
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #272727;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    border-bottom: 10px solid $primaryColor;
+    li {
+        list-style: none;
+        width: 30px;
+        height: 30px;
+        background: $primaryColor;
+        margin: 0 10px;
+        border-radius: 50%;
+        animation:  jumping 0.8s linear infinite;
+        @for $i from 1 through 7 {
+            &:nth-child(#{$i}) {
+                animation-delay: calc(0.3s * $i);
+            }
+        }
+    }
+}
+
+@keyframes jumping {
+    0%,100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-150px);
+    }
+}

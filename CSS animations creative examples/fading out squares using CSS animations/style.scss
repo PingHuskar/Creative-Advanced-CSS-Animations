@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+}
+
+.loader {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    span {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            animation: loading 1s linear infinite;
+        }
+        @for $j from 1 through 3 {
+            @for $i from 1 through 3 {
+                &.s#{$i+3*($j - 1)}::before {
+                    animation-delay: 0.1s * $j;
+                }
+            }
+        }
+    }
+}
+
+@keyframes loading {
+    0% { width: 100%; height: 100%; }
+    100% { width: 0; height: 0; }
+}

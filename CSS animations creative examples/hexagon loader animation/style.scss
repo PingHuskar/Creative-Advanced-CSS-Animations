@@ -1,0 +1,61 @@
+$hexagonWidth : 50px;
+$animation : 2s linear infinite;
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+}
+
+.line {
+    width: 300px;
+    border-bottom: 4px solid #fff;
+    position: relative;
+    animation: animateline $animation;
+    .hexagon {
+        position: absolute;
+        left: 0;
+        bottom: 14px;
+        width: $hexagonWidth;
+        height: 30px;
+        background: white;
+        animation: animatehexagon $animation;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            transform: rotate(60deg);
+        }
+        &::after {
+            @extend ::before;
+            transform: rotate(-60deg);
+        }
+    }
+}
+
+@keyframes animatehexagon {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: calc(100% - $hexagonWidth);
+        transform: rotate(720deg);
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes animateline {
+    0%, 100% { transform: rotate(30deg); }
+    25% { transform: rotate(0deg); }
+    50% { transform: rotate(-30deg); }
+    75% { transform: rotate(0deg); }
+}

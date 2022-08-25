@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url(bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.rain {
+  height: 100%;
+  background: url(rain.png);
+  -webkit-animation: rain 0.3s linear infinite;
+          animation: rain 0.3s linear infinite;
+}
+
+@-webkit-keyframes rain {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 20% 100%;
+  }
+}
+
+@keyframes rain {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 20% 100%;
+  }
+}/*# sourceMappingURL=style.css.map */

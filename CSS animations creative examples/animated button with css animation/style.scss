@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    font-size: 40px;
+    border: 3px solid white;
+    padding: 40px 80px;
+    position: relative;
+    overflow: hidden;
+    &::before {
+        content: '';
+        background: #F44336;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 120px;
+        height: 100%;
+        z-index: -1;
+        transform: skew(-15deg);
+        animation: moving 2s linear infinite;
+        transition: .5s;
+    }
+    &:hover {
+        &::before {
+            width: 100%;
+            transform: skew(0);
+            // animation: none;
+        }
+    }
+}
+
+@keyframes moving {
+    0% {
+        left: -50%;
+    }
+    100% {
+        left: 110%;
+    }
+}

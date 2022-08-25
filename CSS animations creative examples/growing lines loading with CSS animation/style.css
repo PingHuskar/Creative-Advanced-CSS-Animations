@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+}
+
+.loader {
+  width: 1000px;
+  display: flex;
+}
+.loader span {
+  width: 166.6666666667px;
+  height: 600px;
+  margin: 0 1px;
+  background: white;
+  -webkit-animation: loading 0.8s ease-in-out infinite;
+          animation: loading 0.8s ease-in-out infinite;
+}
+.loader span:nth-child(1) {
+  background: #2eeca8;
+}
+.loader span:nth-child(2) {
+  background: #eade3d;
+}
+.loader span:nth-child(3) {
+  background: #55acee;
+}
+.loader span:nth-child(4) {
+  background: #ec902e;
+}
+.loader span:nth-child(5) {
+  background: #09b7bf;
+}
+.loader span:nth-child(6) {
+  background: #ea3d8c;
+}
+.loader span:nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+.loader span:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.loader span:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.loader span:nth-child(4) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.loader span:nth-child(5) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.loader span:nth-child(6) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    transform: scaleY(0.1);
+  }
+  35% {
+    transform: scaleY(1);
+  }
+  60%, 100% {
+    transform: scaleY(0.1);
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: scaleY(0.1);
+  }
+  35% {
+    transform: scaleY(1);
+  }
+  60%, 100% {
+    transform: scaleY(0.1);
+  }
+}/*# sourceMappingURL=style.css.map */

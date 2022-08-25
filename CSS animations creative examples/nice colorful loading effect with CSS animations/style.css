@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+}
+
+.container {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  -webkit-animation: animate 0.8s linear infinite;
+          animation: animate 0.8s linear infinite;
+  transform: rotate(45deg);
+}
+.container span {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: rotate 0.8s linear infinite;
+          animation: rotate 0.8s linear infinite;
+}
+.container span:nth-child(1) {
+  top: 0;
+  left: 0;
+  background: #FCEBA7;
+}
+.container span:nth-child(2) {
+  top: 0;
+  right: 0;
+  background: #55DDB9;
+}
+.container span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  background: #FD6C64;
+}
+.container span:nth-child(4) {
+  bottom: 0;
+  right: 0;
+  background: #1F7880;
+}
+
+@-webkit-keyframes animate {
+  0%, 10%, 90%, 100% {
+    width: 100px;
+    height: 100px;
+  }
+  50% {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@keyframes animate {
+  0%, 10%, 90%, 100% {
+    width: 100px;
+    height: 100px;
+  }
+  50% {
+    width: 150px;
+    height: 150px;
+  }
+}
+@-webkit-keyframes rotate {
+  0%, 10% {
+    transform: rotate(0deg);
+  }
+  50%, 90%, 100% {
+    transform: rotate(90deg);
+  }
+}
+@keyframes rotate {
+  0%, 10% {
+    transform: rotate(0deg);
+  }
+  50%, 90%, 100% {
+    transform: rotate(90deg);
+  }
+}/*# sourceMappingURL=style.css.map */

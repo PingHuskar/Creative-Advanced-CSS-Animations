@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #273c75;
+}
+
+h1 {
+  font-size: 200px;
+  text-align: center;
+  text-transform: uppercase;
+  background: url(image.jpg);
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-animation: textbackground 10s linear infinite;
+          animation: textbackground 10s linear infinite;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+@-webkit-keyframes textbackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes textbackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}/*# sourceMappingURL=style.css.map */

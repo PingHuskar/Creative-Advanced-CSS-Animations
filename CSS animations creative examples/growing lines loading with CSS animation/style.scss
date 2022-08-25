@@ -1,0 +1,47 @@
+$loaderWidth : 1000px;
+$numOfSpan : 6;
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+}
+
+.loader {
+    width: $loaderWidth;
+    display: flex;
+    span {
+        width: $loaderWidth/$numOfSpan;
+        height: 600px;
+        margin: 0 1px;
+        background: white;
+        animation: loading .8s ease-in-out infinite;
+        &:nth-child(1) { background: #2eeca8; }
+        &:nth-child(2) { background: #eade3d; }
+        &:nth-child(3) { background: #55acee; }
+        &:nth-child(4) { background: #ec902e; }
+        &:nth-child(5) { background: #09b7bf; }
+        &:nth-child(6) { background: #ea3d8c; }
+        
+        @for $i from 1 through $numOfSpan {
+            &:nth-child(#{$i}) {
+                animation-delay: 0.1s * $i;
+            }
+        }
+    }
+}
+
+@keyframes loading {
+    0% {
+        transform: scaleY(0.1);
+    }
+    35% {
+        transform: scaleY(1);
+    }
+    60%, 100% {
+        transform: scaleY(0.1);
+    }
+}
