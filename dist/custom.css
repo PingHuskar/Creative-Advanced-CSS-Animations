@@ -1,6 +1,17 @@
+* {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 h1, h2, h3, h4, h5, h6, p {
   font-family: sans-serif;
   color: #000 !important;
+}
+
+h3 {
+  color: #fff !important;
 }
 
 .title {
@@ -23,4 +34,21 @@ h1, h2, h3, h4, h5, h6, p {
   min-height: 100vh;
   z-index: -1000;
   opacity: 0.3;
+}
+
+ul:hover li {
+  color: #000;
+}
+ul:hover li a {
+  color: #000;
+}
+ul li {
+  font-size: 1rem;
+  text-transform: uppercase;
+  list-style-type: upper-greek;
+  transition: 0.5s;
+}
+ul li:hover {
+  color: #fff;
+  transform: scale(2.5);
 }/*# sourceMappingURL=custom.css.map */
